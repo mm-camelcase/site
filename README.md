@@ -1,2 +1,2 @@
-# sire
+# site
 github pages repo
