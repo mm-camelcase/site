@@ -13,7 +13,8 @@ export const Skills = ({ title, cards }) => {
 							key={index}
 							title={value.title}
 							description={value.description}
-							link={value.link} />
+							link={value.link}
+							listlinks={value.listlinks} />
 					))}
 				</div>
 			</div>
@@ -32,7 +33,8 @@ export const Projects = ({ title, cards }) => {
 							key={index}
 							title={value.title}
 							description={value.description}
-							icons={value.icons} />
+							icons={value.icons}
+							listlinks={value.listlinks} />
 					))}
 				</div>
 				{/* <div className="text-center">
@@ -43,20 +45,66 @@ export const Projects = ({ title, cards }) => {
 	);
 }
 
-export const Card = ({ title, description, icons }) => {
+export const Card = ({ title, description, icons, listlinks }) => {
 	return (
-		<div className="card py-3 px-3 mx-sm-4 my-4 card-work" style={{ width: "20rem" }}>
+		<div className="card py-3 px-3 mx-2 my-3 card-work">
 			<h4 className="text-primary">{title}</h4>
-			<p className="text-dark">{description}</p>
+
+			{/* Description now supports HTML content */}
+			<div
+				className="text-dark card-description"
+				dangerouslySetInnerHTML={{ __html: description }}
+			></div>
+
 			<div className="text-end">
-				{icons && icons.map((value, index) => (
-					<Link key={index} href={value.link}>
-						<a target="_blank" rel="noreferrer">
-							<FontAwesomeIcon className="icon-style mx-1" icon={value.icon} size="2x" />
-						</a>
-					</Link>
-				))}
+				{/* Icons Section */}
+				{icons &&
+					icons.map((value, index) => (
+						<Link key={index} href={value.link}>
+							<a target="_blank" rel="noreferrer" className="hover-icon">
+								<FontAwesomeIcon
+									className="icon-style mx-1"
+									icon={value.icon}
+									size="2x"
+								/>
+							</a>
+						</Link>
+					))}
+
+				{/* List Links Section */}
+				<div className="list-links-container">
+					{listlinks &&
+						listlinks.map((linkObj, index) => (
+							<div
+								key={index}
+								className={`d-flex align-items-center mb-2 ${linkObj.link ? "hover-link-container" : "unclickable-link"
+									}`}
+							>
+								{/* Icon */}
+								<FontAwesomeIcon
+									icon={linkObj.icon}
+									size="2x"
+									className="icon-style me-2"
+								/>
+
+								{/* Text */}
+								{linkObj.link ? (
+									<Link href={linkObj.link}>
+										<a
+											target="_blank"
+											rel="noreferrer"
+											className="hover-link"
+										>
+											{linkObj.title}
+										</a>
+									</Link>
+								) : (
+									<span className="unclickable-text">{linkObj.title}</span>
+								)}
+							</div>
+						))}
+				</div>
 			</div>
 		</div>
 	);
-}
+};

@@ -4,7 +4,7 @@ import { faAppStore, faGithub, faGooglePlay } from '@fortawesome/free-brands-svg
 import { } from '@fortawesome/free-solid-svg-icons';
 
 export const navigation = {
-  name: "Hashir",
+  name: "Camelcase Ltd.",
   links: [
     {
       title: "About",
@@ -21,16 +21,13 @@ export const navigation = {
     {
       title: "Links",
       link: "/links",
-    },
-    {
-      title: "Blog",
-      link: "https://medium.com/@hashirshoaeb",
     }
   ],
 }
 export const intro = {
-  title: "Hey, I'm Hashir",
-  description: "A Computer Engineer creating mobile apps and static websites.",
+  title: "Mark Mitchell",
+  //description: "A Computer Engineer creating mobile apps and static websites.",
+  description: "Software Developer and Devops Engineer.",
   image: profile.src,
   buttons: [
     {
@@ -40,7 +37,7 @@ export const intro = {
     },
     {
       title: "Resume",
-      link: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+      link: "https://todo.com",
       isPrimary: false,
     },
   ],
@@ -48,26 +45,48 @@ export const intro = {
 
 export const about = {
   title: "Who I am",
+  // description: [
+  //   "I graduated from National University of Sciences and Technology (NUST) in 2020 with a degree in Computer Engineering. I kick started my professional career as a mobile application developer working remotely for a UK based startup — Lessgo.",
+  //   "The tech industry is ever-evolving and I love being able to grow with it, while continually solidifying the fundamentals. I opensource my code from a place of empathy - for future developers, teammates, users, and with accessibility in mind. I also love joining communities, helping and mentoring new developers, and supporting organizations to promote diversity in tech. I’m sharing my programming journey on instagram, helping people who are just getting into the space of programming.",
+  //   "When I’m not programming, I focus on my hobbies which are: diary writing, doodling, meeting people and growing my network.",
+  // ],
   description: [
-    "I graduated from National University of Sciences and Technology (NUST) in 2020 with a degree in Computer Engineering. I kick started my professional career as a mobile application developer working remotely for a UK based startup — Lessgo.",
-    "The tech industry is ever-evolving and I love being able to grow with it, while continually solidifying the fundamentals. I opensource my code from a place of empathy - for future developers, teammates, users, and with accessibility in mind. I also love joining communities, helping and mentoring new developers, and supporting organizations to promote diversity in tech. I’m sharing my programming journey on instagram, helping people who are just getting into the space of programming.",
-    "When I’m not programming, I focus on my hobbies which are: diary writing, doodling, meeting people and growing my network.",
-  ],
+    "Who am I?"
+  ]
 }
 
 export const work = {
   title: "What I do",
   cards: [
     {
-      title: "Mobile App Development",
-      description: "I create pixel perfect iOS and Andriod apps using Flutter.",
+      title: "Software Development",
+      description: "I am a software developer with over 20 years of experience in <b>Java</b> and Spring. I build scalable, reliable applications, craft high-performance APIs, and optimise systems for efficiency and maintainability.",
       icons: null,
     },
     {
-      title: "Web Development",
-      description: "I create responsive static websites using Reactjs.",
+      title: "Infrastructure",
+      description: "I design and build clean, DRY, secure configurations using Terraform and Terragrunt. From networks to containers, I deliver end-to-end infrastructure solutions that prioritise security and scalability, including orchestration for seamless workflows.",
       icons: null,
-    }
+    },
+    {
+      title: "Team Upskilling",
+      description: "I create tailored Proof of Concepts (POCs) and tutorials designed to align with the team's skillset and tech stack. These resources help teams quickly adopt new technologies and improve their workflows.",
+      icons: null,
+    },
+    {
+      title: "Development Environments",
+      description: `
+        Modern architectures are complex, but developers shouldn’t need to master them to start coding.
+        <ul>
+            <li>Simplify workflows, so developers can focus on coding, not infrastructure.</li>
+            <li>Reduce time-to-deploy with tailored, efficient setups.</li>
+            <li>(todo: upd/change)Support both local and remote Kubernetes environments for seamless transitions.</li>
+        </ul>
+        (todo: upd/change)My solutions empower teams to deliver faster and stay productive.
+    `,
+      icons: null,
+      listlinks: null
+    },
   ],
 }
 
@@ -75,41 +94,68 @@ export const projects = {
   title: "Projects",
   cards: [
     {
-      title: "StarBook",
-      description: "A digital diary and mood tracking app that helps you in keeping track of your mood and productivity throughout the month/year.",
-      icons: [
+      title: "Code",
+      description: "Common Design Patterns implemented in Java and Spring and (todo: rephrase)Java Optomisatiosn for mx performance and imin resorce usage",
+      listlinks: [
         {
-          icon: faAppStore,
-          link: "https://apps.apple.com/us/app/starbook-journal-ai-diary/id1552418289",
+          icon: faGithub,
+          link: null,
+          title: "Java Design Patterns"
         },
         {
           icon: faGithub,
-          link: "https://github.com/hashirshoaeb/star_book",
+          link: null,
+          title: "Java Optomised"
+        }
+      ]
+    },
+    {
+      title: "Infrastructure",
+      description: "Clean, DRY Infrastructure patterns using Terraform and Terragrunt",
+      listlinks: [
+        {
+          icon: faGithub,
+          link: null,
+          title: "AWS ECS Infra"
         },
       ]
     },
     {
-      title: "QuranTalk",
-      description: "An emotional well being and mental health app. The app helps people to navigate their emotions in the light of the Quran.",
-      icons: [
+      title: "Development Environments",
+      description: "Some examples of bespoke solutions I have successfully delivered for clients in the past.",
+      icons: null,
+      listlinks: [
         {
-          icon: faAppStore,
-          link: "https://apps.apple.com/us/app/qurantalk/id1563425149",
+          icon: faGithub,
+          link: "https://github.com/mm-camelcase/k8s-devenv",
+          title: "Local Kubernetes devenv"
         },
         {
-          icon: faGooglePlay,
-          link: "https://play.google.com/store/apps/details?id=com.ayahemotion.quran_talk",
-        },
+          icon: faGithub,
+          link: "https://github.com/mm-camelcase/k8s-remote-devenv",
+          title: "Remote Kubernetes devenv"
+        }
       ]
     },
     {
-      title: "Portfolio",
-      description: "A portfolio website template that helps you showcase your work, projects and skills as a software developer or freelancer.",
-      icons: [
+      title: "Tutorials",
+      description: "Tutorials and POCs",
+      listlinks: [
         {
           icon: faGithub,
-          link: "https://github.com/hashirshoaeb/portfolio",
+          link: null,
+          title: "Spring boot deployed to AWS ECS"
         },
+        {
+          icon: faGithub,
+          link: null,
+          title: "Feature Flags"
+        },
+        {
+          icon: faGithub,
+          link: null,
+          title: "Lambdas in Java"
+        }
       ]
     },
   ],
@@ -117,53 +163,41 @@ export const projects = {
 
 export const contact = {
   title: "Get in touch",
-  description: "Coffee Chat! Please do not hesitate to schedule a meeting. Alternatively, feel free to reach out directly by email at hashirshoaeb@gmail.com.",
+  description: "Feel free to reach out directly by email at markmitchell451@gmail.com.",
   buttons: [
     {
       title: "Email Me",
-      link: "mailto:hashirshoaeb@gmail.com",
+      link: "mailto:markmitchell451@gmail.com1",
       isPrimary: true,
-    },
-    {
-      title: "Schedule Meeting",
-      link: "https://topmate.io/hashirshoaeb",
-      isPrimary: false,
-    },
+    }
   ]
 }
 
 // SEARCH ENGINE 
 export const SEO = {
   // 50 - 60 char  
-  title: "Hashir Shoaib | Computer Engineer | Flutter | Reactjs developer",
-  description: "I create mobile apps and static websites. I graduated from National University of Sciences and Technology (NUST) in 2020 with a degree in Computer Engineering.",
+  title: "Mark Mitchell | Software Developer | Java | DevOps",
+  description: "todo.",
   image: profile.src,
 }
 
 export const links = {
   image: profile.src,
-  title: "@hashirshoaeb",
-  description: "Computer Engineer | Flutter | Reactjs Developer",
+  title: "markmitchell",
+  description: "Mark Mitchell | Software Developer | Java | DevOps",
   cards: [
     {
       title: "My website",
-      link: "https://hashirshoaeb.com/",
+      link: "https://mm-camelcase.github.io/site/",
     },
-    {
-      title: "QuranTalk App",
-      link: "https://www.qurantalk.app/",
-    },
-    {
-      title: "StarBook App",
-      link: "https://starbook.dev/",
-    },
+
     {
       title: "My GitHub",
-      link: "https://github.com/hashirshoaeb/",
+      link: "https://github.com/mm-camelcase",
     },
     {
       title: "My LinkedIn",
-      link: "https://www.linkedin.com/in/hashirshoaeb/",
+      link: "https://www.linkedin.com/in/mark-mitchell-camelcase/",
     },
   ]
 }

@@ -18,9 +18,19 @@
 // $inverted-font: #FFFFFF;
 
 // bootstrap overrides 
-$primary: #365B6D;
+// $primary: #365B6D;
+// $secondary: #F7F7F7;
+// Darcy 1
+// $primary: #480CA8;
+// $secondary: #DFE7FD;
+// Darcy 2 (Green)
+// $primary: #013601;
+// $secondary: #f6fce0;
+// Mark  (Greys)
+$primary: #434343;
 $secondary: #F7F7F7;
 $light: #FFFFFF;
+
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
 $font-family-sans-serif: -apple-system, 'Barlow', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -134,6 +144,9 @@ a {
 
 .card-work {
   transition: box-shadow .3s;
+  max-width: 20rem; // Limit the card’s width to 20rem
+  width: 100%; // Allow the card to shrink as needed
+  //height: 100%; // Forces all cards to have equal height within a flex container
 }
 
 .card-work:hover {
@@ -149,4 +162,56 @@ a {
 .card-image:hover {
   transform: translate(-0.5rem, -0.5rem);
   box-shadow: 2rem 2rem $primary;
+}
+
+// new
+
+// Hover effect for icons and links
+//.hover-icon,
+.hover-link {
+  transition: color 0.3s ease, transform 0.3s ease;
+  color: $primary;
+  transform-origin: center left; // Scale toward the right, reducing the impact on text
+}
+
+//.hover-icon:hover,
+.hover-link:hover {
+  color: $light; // Change to light colour (white) on hover
+  transform: scale(1.1); // Slightly enlarge on hover
+}
+
+.hover-link {
+  text-decoration: none;
+  font-family: $font-family-sans-serif;
+}
+
+.hover-link-container:hover .hover-icon,
+.hover-link-container:hover .hover-link {
+  color: $primary;
+}
+
+// Ensure a smooth and uniform style for links
+a {
+  text-decoration: none;
+  color: inherit; // Maintain inherited colour for links
+}
+
+// Styling for unclickable links
+.unclickable-link {
+  opacity: 0.5; // Make it less prominent
+  pointer-events: none; // Disable clicks
+}
+
+// Styling for unclickable text
+.unclickable-text {
+  opacity: 0.8; // Make it visually appear inactive
+}
+
+// Add spacing between description and list links
+.card-description {
+  margin-bottom: 0.6rem; // Adjust spacing as needed
+}
+
+.list-links-container {
+  margin-top: 0.6rem; // Optional, ensures consistent top spacing
 }
