@@ -75,15 +75,7 @@ export const work = {
     },
     {
       title: "Development Environments",
-      description: `
-        Modern architectures are complex, but developers shouldn’t need to master them to start coding.
-        <ul>
-            <li>Simplify workflows, so developers can focus on coding, not infrastructure.</li>
-            <li>Reduce time-to-deploy with tailored, efficient setups.</li>
-            <li>(todo: upd/change)Support both local and remote Kubernetes environments for seamless transitions.</li>
-        </ul>
-        (todo: upd/change)My solutions empower teams to deliver faster and stay productive.
-    `,
+      description: "Modern architectures are complex, but developers shouldn’t need to master them to start coding. Simplified workflows allow developers to focus on coding, not infrastructure, and streamlined deployment enables teams to stay productive.",
       icons: null,
       listlinks: null
     },

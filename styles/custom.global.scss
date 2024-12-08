@@ -172,6 +172,7 @@ a {
   transition: color 0.3s ease, transform 0.3s ease;
   color: $primary;
   transform-origin: center left; // Scale toward the right, reducing the impact on text
+  text-align: left;
 }
 
 //.hover-icon:hover,
@@ -183,6 +184,7 @@ a {
 .hover-link {
   text-decoration: none;
   font-family: $font-family-sans-serif;
+
 }
 
 .hover-link-container:hover .hover-icon,
@@ -200,6 +202,7 @@ a {
 .unclickable-link {
   opacity: 0.5; // Make it less prominent
   pointer-events: none; // Disable clicks
+  text-align: left;
 }
 
 // Styling for unclickable text
